@@ -1,0 +1,52 @@
+\begin{table}[t]
+\centering
+\small
+\caption{RQ5. Class-conditional coverage gap / average set size, marginal vs Mondrian. Lower gap is fairer; larger sets are the price.}
+\label{tab:imbalance}
+\begin{tabular}{lrrrrr}
+\toprule
+study & dataset & split & mondrian-split & cv+ & mondrian-cv+ \\
+\midrule
+budget & analcatdata\_authorship & 0.131 / 0.89 & -- & -- & -- \\
+budget & balance-scale & 0.642 / 0.90 & -- & -- & -- \\
+budget & banknote & 0.085 / 0.90 & -- & -- & -- \\
+budget & blood-transfusion & 0.406 / 1.30 & -- & -- & -- \\
+budget & breast-w & 0.088 / 0.92 & -- & -- & -- \\
+budget & climate-model & 0.948 / 0.98 & -- & -- & -- \\
+budget & cmc & 0.213 / 2.14 & -- & -- & -- \\
+budget & credit-g & 0.255 / 1.44 & -- & -- & -- \\
+budget & diabetes & 0.149 / 1.30 & -- & -- & -- \\
+budget & ilpd & 0.350 / 1.41 & -- & -- & -- \\
+budget & qsar-biodeg & 0.125 / 1.09 & -- & -- & -- \\
+budget & steel-plates-fault & 0.042 / 0.91 & -- & -- & -- \\
+budget & tic-tac-toe & 0.170 / 0.91 & -- & -- & -- \\
+budget & vehicle & 0.201 / 1.17 & -- & -- & -- \\
+budget & wdbc & 0.075 / 0.90 & -- & -- & -- \\
+crossover & banknote & 0.078 / 0.90 & -- & 0.069 / 0.90 & -- \\
+crossover & cmc & 0.232 / 2.22 & -- & 0.208 / 2.21 & -- \\
+crossover & credit-g & 0.286 / 1.46 & -- & 0.289 / 1.44 & -- \\
+crossover & qsar-biodeg & 0.119 / 1.17 & -- & 0.118 / 1.15 & -- \\
+crossover & steel-plates-fault & 0.060 / 0.91 & -- & 0.062 / 0.91 & -- \\
+imbalance & breast-w & 0.416 / 0.92 & 0.084 / 1.25 & 0.479 / 0.91 & 0.069 / 0.93 \\
+imbalance & credit-g & 0.797 / 1.06 & 0.082 / 1.67 & 0.822 / 1.06 & 0.058 / 1.58 \\
+imbalance & diabetes & 0.723 / 1.05 & 0.084 / 1.60 & 0.753 / 1.04 & 0.073 / 1.46 \\
+imbalance & qsar-biodeg & 0.603 / 0.96 & 0.071 / 1.49 & 0.613 / 0.96 & 0.058 / 1.24 \\
+imbalance & wdbc & 0.311 / 0.91 & 0.073 / 1.54 & 0.298 / 0.91 & 0.062 / 0.95 \\
+main & analcatdata\_authorship & 0.131 / 0.89 & 0.146 / 0.90 & 0.125 / 0.91 & 0.094 / 0.91 \\
+main & balance-scale & 0.642 / 0.90 & 0.124 / 0.94 & 0.601 / 0.90 & 0.129 / 0.94 \\
+main & banknote & 0.085 / 0.90 & 0.033 / 0.91 & 0.085 / 0.91 & 0.034 / 0.90 \\
+main & blood-transfusion & 0.406 / 1.30 & 0.046 / 1.58 & 0.400 / 1.29 & 0.053 / 1.53 \\
+main & breast-w & 0.088 / 0.92 & 0.047 / 0.93 & 0.104 / 0.91 & 0.041 / 0.92 \\
+main & climate-model & 0.948 / 0.98 & 0.096 / 1.41 & 0.945 / 0.97 & 0.065 / 1.28 \\
+main & cmc & 0.213 / 2.14 & 0.081 / 2.27 & 0.217 / 2.12 & 0.053 / 2.21 \\
+main & credit-g & 0.255 / 1.44 & 0.049 / 1.53 & 0.272 / 1.39 & 0.042 / 1.50 \\
+main & diabetes & 0.149 / 1.30 & 0.049 / 1.37 & 0.144 / 1.29 & 0.035 / 1.35 \\
+main & ilpd & 0.350 / 1.41 & 0.042 / 1.56 & 0.337 / 1.41 & 0.051 / 1.51 \\
+main & qsar-biodeg & 0.125 / 1.09 & 0.043 / 1.14 & 0.121 / 1.09 & 0.022 / 1.15 \\
+main & steel-plates-fault & 0.042 / 0.91 & 0.052 / 0.91 & 0.058 / 0.91 & 0.032 / 0.91 \\
+main & tic-tac-toe & 0.170 / 0.91 & 0.038 / 0.91 & 0.167 / 0.92 & 0.033 / 0.93 \\
+main & vehicle & 0.201 / 1.17 & 0.106 / 1.26 & 0.190 / 1.14 & 0.089 / 1.23 \\
+main & wdbc & 0.075 / 0.90 & 0.047 / 0.91 & 0.072 / 0.91 & 0.043 / 0.90 \\
+\bottomrule
+\end{tabular}
+\end{table}

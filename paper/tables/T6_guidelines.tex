@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Practical guidance. For each regime, the method with the smallest sets, the most stable coverage, the fairest per-class coverage, and the lowest wall-clock cost, among methods reaching nominal coverage.}
+\label{tab:guidelines}
+\begin{tabular}{lrrrr}
+\toprule
+regime & smallest sets & most stable & fairest & cheapest \\
+\midrule
+binary & jackknife\_plus & jackknife\_plus & mondrian\_cvplus\_K10 & mondrian\_split\_0.3 \\
+multiclass & cvplus\_K20 & cvplus\_K10 & mondrian\_cvplus\_K10 & mondrian\_split\_0.3 \\
+\bottomrule
+\end{tabular}
+\end{table}

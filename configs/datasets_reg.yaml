@@ -1,0 +1,28 @@
+# Regression datasets.  `source: sklearn` uses a bundled loader (no network).
+# OpenML ids are verified at download time; `fallback_name` covers id drift.
+
+datasets:
+  - key: diabetes-reg
+    source: sklearn
+    loader: load_diabetes
+    expected: {n: 442, d: 10}
+  - key: wine-quality-red
+    source: openml
+    openml_id: 40691
+    fallback_name: wine-quality-red
+    expected: {n: 1599, d: 11}
+  - key: concrete
+    source: openml
+    openml_id: 4353
+    fallback_name: Concrete_Compressive_Strength
+    expected: {n: 1030, d: 8}
+  - key: energy-efficiency
+    source: openml
+    openml_id: 1472
+    fallback_name: energy-efficiency
+    expected: {n: 768, d: 8}
+  - key: airfoil
+    source: openml
+    openml_id: 44957
+    fallback_name: airfoil_self_noise
+    expected: {n: 1503, d: 5}

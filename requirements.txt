@@ -1,0 +1,14 @@
+# Versions used to produce every number in paper/ (see paper/reproducibility.json).
+# PyTorch is installed separately so that the CUDA build matches your driver, e.g.
+#   pip install torch==2.7.0 --index-url https://download.pytorch.org/whl/cu126
+numpy==2.0.2
+pandas==2.2.3
+scipy==1.14.1
+scikit-learn==1.6.0
+tabpfn==2.2.1
+xgboost==3.2.0
+pyarrow==25.0.1
+matplotlib==3.9.2
+PyYAML>=6.0
+pytest>=8.0
+ruff>=0.6

@@ -1,0 +1,70 @@
+# Classification datasets (OpenML).
+#
+# `openml_id` is the primary identifier.  `fallback_name` is used only if that id
+# fails to resolve, in which case download_assets.py records the substitution in
+# the `resolved` block it writes back into this file.
+#
+# Expected shapes are from the project spec and are CHECKED at download time; a
+# mismatch is reported, never silently accepted.
+
+datasets:
+  - key: breast-w
+    openml_id: 15
+    fallback_name: breast-w
+    expected: {n: 699, d: 9, classes: 2}
+  - key: diabetes
+    openml_id: 37
+    fallback_name: diabetes
+    expected: {n: 768, d: 8, classes: 2}
+  - key: credit-g
+    openml_id: 31
+    fallback_name: credit-g
+    expected: {n: 1000, d: 20, classes: 2}
+  - key: vehicle
+    openml_id: 54
+    fallback_name: vehicle
+    expected: {n: 846, d: 18, classes: 4}
+  - key: blood-transfusion
+    openml_id: 1464
+    fallback_name: blood-transfusion-service-center
+    expected: {n: 748, d: 4, classes: 2}
+  - key: climate-model
+    openml_id: 1467
+    fallback_name: climate-model-simulation-crashes
+    expected: {n: 540, d: 18, classes: 2}
+  - key: ilpd
+    openml_id: 1480
+    fallback_name: ilpd
+    expected: {n: 583, d: 10, classes: 2}
+  - key: qsar-biodeg
+    openml_id: 1494
+    fallback_name: qsar-biodeg
+    expected: {n: 1055, d: 41, classes: 2}
+  - key: wdbc
+    openml_id: 1510
+    fallback_name: wdbc
+    expected: {n: 569, d: 30, classes: 2}
+  - key: steel-plates-fault
+    openml_id: 1504
+    fallback_name: steel-plates-fault
+    expected: {n: 1941, d: 33, classes: 2}
+  - key: banknote
+    openml_id: 1462
+    fallback_name: banknote-authentication
+    expected: {n: 1372, d: 4, classes: 2}
+  - key: balance-scale
+    openml_id: 11
+    fallback_name: balance-scale
+    expected: {n: 625, d: 4, classes: 3}
+  - key: cmc
+    openml_id: 23
+    fallback_name: cmc
+    expected: {n: 1473, d: 9, classes: 3}
+  - key: tic-tac-toe
+    openml_id: 50
+    fallback_name: tic-tac-toe
+    expected: {n: 958, d: 9, classes: 2}
+  - key: analcatdata_authorship
+    openml_id: 458
+    fallback_name: analcatdata_authorship
+    expected: {n: 841, d: 70, classes: 4}

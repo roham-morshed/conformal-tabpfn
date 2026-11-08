@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\caption{RQ1. Mean wall-clock seconds per cell (fit + predict, CPU), with the ratio to that model's own Split-CP cost in parentheses. The ratio is $\approx K$ for every model, including the in-context learner.}
+\label{tab:cost}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+model & cvplus\_K10 & cvplus\_K20 & cvplus\_K5 & jackknife\_plus & mondrian\_cvplus\_K10 & mondrian\_split\_0.3 & pooled\_cv\_K10 & split\_0.3 \\
+\midrule
+tabpfn & 7.383 (11.3$\times$) & 16.935 (25.9$\times$) & 3.215 (4.9$\times$) & 353.418 (540.0$\times$) & 7.915 (12.1$\times$) & 0.623 (1.0$\times$) & 8.572 (13.1$\times$) & 0.654 (1.0$\times$) \\
+xgboost & 0.612 (10.1$\times$) & 1.207 (19.9$\times$) & 0.304 (5.0$\times$) & 41.936 (691.0$\times$) & 0.582 (9.6$\times$) & 0.060 (1.0$\times$) & 0.637 (10.5$\times$) & 0.061 (1.0$\times$) \\
+rf & 4.419 (10.4$\times$) & 8.868 (20.8$\times$) & 2.156 (5.1$\times$) & 214.511 (503.6$\times$) & 4.321 (10.1$\times$) & 0.424 (1.0$\times$) & 4.709 (11.1$\times$) & 0.426 (1.0$\times$) \\
+logreg & 0.132 (10.2$\times$) & 0.263 (20.3$\times$) & 0.065 (5.0$\times$) & 5.258 (406.0$\times$) & 0.129 (10.0$\times$) & 0.013 (1.0$\times$) & 0.143 (11.0$\times$) & 0.013 (1.0$\times$) \\
+\bottomrule
+\end{tabular}
+\\[2pt]\footnotesize TabPFN's fit is genuinely near-free, but CV+ also re-predicts $K$ times, and for an in-context learner prediction is the entire cost.
+\end{table}

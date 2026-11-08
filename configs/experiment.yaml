@@ -1,0 +1,67 @@
+# Main experiment grid (spec section 6).
+#
+# A cell is (dataset, model, cp_method, alpha, seed, n_train).  `scores` and
+# `alphas` are evaluated post-hoc from the same fitted probabilities, so they
+# multiply the number of ROWS but not the number of model fits.
+
+datasets:
+  - breast-w
+  - diabetes
+  - credit-g
+  - vehicle
+  - blood-transfusion
+  - climate-model
+  - ilpd
+  - qsar-biodeg
+  - wdbc
+  - steel-plates-fault
+  - banknote
+  - balance-scale
+  - cmc
+  - tic-tac-toe
+  - analcatdata_authorship
+
+models: [tabpfn, xgboost, rf, logreg]
+
+cp_methods:
+  - split_0.3
+  - mondrian_split_0.3
+  - cvplus_K5
+  - cvplus_K10
+  - cvplus_K20
+  - mondrian_cvplus_K10
+  - pooled_cv_K10
+  # jackknife_plus is NOT in the main grid: at K = n_train each cell costs ~100x
+  # a K=10 cell.  It runs as a dedicated RQ1 timing sub-study instead:
+  #   python scripts/run_experiments.py --cp-methods jackknife_plus   #       --datasets wdbc climate-model ilpd --seeds 5 --n-train 150
+
+scores: [lac, aps, raps]
+alphas: [0.1, 0.05, 0.2]     # alphas[0] is the headline level
+n_seeds: 20
+
+test_frac: 0.3
+test_cap: 300
+n_train: 500           # the paper's small-data regime (also the spec's jackknife+ ceiling)
+jackknife_max_n: 0     # 0 = never auto-include jackknife+ in the main grid
+chunk_size: 256
+n_jobs: 1
+raps_lambda: 0.01
+raps_k_reg: 1
+
+# "tight"  = exact k-th order statistic (textbook conformal quantile)
+# "higher" = the project spec's literal numpy call (valid but conservative)
+# See NOTES.md D1 for the measured difference.
+quantile_method: tight
+
+budget:                 # RQ3
+  cal_fracs: [0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5]
+  models: [tabpfn, xgboost]
+
+crossover:              # RQ6
+  n_trains: [100, 200, 400, 800]
+  methods: [split_0.3, cvplus_K10]
+  datasets: [credit-g, cmc, steel-plates-fault, banknote, qsar-biodeg]
+
+imbalance:              # RQ5
+  datasets: [breast-w, diabetes, credit-g, qsar-biodeg, wdbc]
+  minority_fracs: [0.05, 0.1, 0.2]

@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-08-21T12:36:44",
+  "environment": {
+    "platform": "Windows-10-10.0.19045-SP0",
+    "processor": "AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD",
+    "python": "3.11.4",
+    "packages": {
+      "python": "3.11.4",
+      "numpy": "2.0.2",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.6.0",
+      "scipy": "1.14.1",
+      "torch": "2.7.0+cu126",
+      "tabpfn": "2.2.1",
+      "xgboost": "3.2.0",
+      "pyarrow": "25.0.1",
+      "matplotlib": "3.9.2"
+    },
+    "gpu_name": "NVIDIA GeForce RTX 2060",
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "gpu_total_memory_gb": 6.0
+  },
+  "n_rows": 130896,
+  "n_cells": 14544,
+  "n_failures": 0,
+  "datasets": [
+    "analcatdata_authorship",
+    "balance-scale",
+    "banknote",
+    "blood-transfusion",
+    "breast-w",
+    "climate-model",
+    "cmc",
+    "credit-g",
+    "diabetes",
+    "ilpd",
+    "qsar-biodeg",
+    "steel-plates-fault",
+    "tic-tac-toe",
+    "vehicle",
+    "wdbc"
+  ],
+  "models": [
+    "logreg",
+    "rf",
+    "tabpfn",
+    "xgboost"
+  ],
+  "cp_methods": [
+    "cvplus_K10",
+    "cvplus_K20",
+    "cvplus_K5",
+    "jackknife_plus",
+    "mondrian_cvplus_K10",
+    "mondrian_split_0.3",
+    "pooled_cv_K10",
+    "split_0.1",
+    "split_0.15",
+    "split_0.2",
+    "split_0.25",
+    "split_0.3",
+    "split_0.4",
+    "split_0.5"
+  ],
+  "alphas": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "scores": [
+    "aps",
+    "lac",
+    "raps"
+  ],
+  "seeds": 20,
+  "quantile_method": [
+    "tight"
+  ],
+  "total_measured_model_seconds": 37737.31994601058,
+  "artifact_build_seconds": 135.91,
+  "dataset_sha256": {
+    "analcatdata_authorship.meta": "a20ef2e0b58d041442559cc02c50da34e6644bc2a8762e8de0bc032b7f7a2065",
+    "balance-scale.meta": "ad05a1a1acdc87e49f389716380194dc95a3e2093d218c094b039435696cfff1",
+    "banknote.meta": "2004101413c45318f68f668b7c5a933d28ad8edf126872dc5d72c76ec84d86d3",
+    "blood-transfusion.meta": "1357eb0a536dc29045e1d164d18b194acf8603f9d426f18380d87ee8f7c9ca09",
+    "breast-w.meta": "4f7fcc70b9f4d594a38a6d0c81ab7760e2d3881cecb795ff0259467d4769a96a",
+    "climate-model.meta": "4e853d3deeea8e764dc6c9496ff43820ee5281182c72c354201b86d7c51ccbc2",
+    "cmc.meta": "af04cdd85da80e7fb31cfe76892d8286b28b2194f5303ed7ed7401901ae77236",
+    "credit-g.meta": "4f6d8b7b3d4751561bd0bc9fe894f1a10aa25242975a3d4dc9d238fb193ec291",
+    "diabetes-reg.meta": "3b7105853b20c12b8afe8d36eaf647a4ed3c51624982b97f15484b3b57b27e44",
+    "diabetes.meta": "8af4071507a8625b68e860d8205fd6da21d4a7fe0bb3aac113a1612e28dc6494",
+    "ilpd.meta": "5e24347e4c59de2f36f97bf3be07e8be21a2f244817e272b489079e786114e4f",
+    "qsar-biodeg.meta": "bbde423b9419282c1d8db2bc6491daa188e25585a6b216bf5eab8f08b6d64ed1",
+    "steel-plates-fault.meta": "8d9de3f8cad4b7391a8de0c800b129ff6220be7f82e3a7a856a52fdf3f5cd421",
+    "tic-tac-toe.meta": "4bc346a387415ab85e65e616e7e97ca5750fc626d1bb6565922c1275c72760bb",
+    "vehicle.meta": "1da601324cec70ea57db05b8f8ac68c692dc49d492a7fdc6c4a48c240cff334a",
+    "wdbc.meta": "08ae224183f5189be632f986d9063f244fd91a272514ffdf1adbd71340d51d9e",
+    "wine-quality-red.meta": "165d5247472c94e72f63d38101a618b3e6963773c46632d38663eb1342cefd28"
+  }
+}
